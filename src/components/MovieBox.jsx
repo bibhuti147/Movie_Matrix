@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FaRegStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -8,8 +7,11 @@ const MovieBox = ({ movie }) => {
   useEffect(() => {
     const getItem = async () => {
       try {
-        const response = await axios.get(`https://www.omdbapi.com/?i=${movie.imdbID}&apikey=5dceb21e`);
-        setRating(response.data.imdbRating);
+        let data = await fetch(
+          `https://www.omdbapi.com/?i=${movie.imdbID}&apikey=5dceb21e`
+        );
+        let convertedData = await data.json();
+        setRating(convertedData.imdbRating);
       } catch (error) {
         console.error("Error fetching tracks:", error);
       }
