@@ -87,7 +87,8 @@ const Home = () => {
     } else {
       setMovies(Movies);
     }
-  }, [searchItems, suggestedItems]);
+    handleCategory(category);
+  }, [searchItems, suggestedItems, category]);
 
   return (
     <div className="min-h-screen bg-[#12172A]">
