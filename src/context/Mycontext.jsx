@@ -11,7 +11,7 @@ export const MyContext = createContext({
 export const MyContextProvider = ({ children }) => {
   const [category, setCategory] = useState("All");
   const [suggestedItems, setSuggestedItems] = useState([]);
-  const apiKey = import.meta.env.VITE_API_KEY;
+  const apiKey = defbdfaf;
   const Movies = [
     {
       Title: "Transformers",
