@@ -5,7 +5,6 @@ import { FaRegStar } from "react-icons/fa";
 import { MyContext } from "../context/Mycontext";
 
 const MovieDetails = () => {
-  const { apiKey } = useContext(MyContext);
   const location = useLocation();
   const { movie } = location.state || {};
   const [details, setDetails] = useState([]);
@@ -25,13 +24,13 @@ const MovieDetails = () => {
   const getItem = async () => {
     try {
       let data1 = await fetch(
-        `https://www.omdbapi.com/?i=${movie.imdbID}&plot=full&apikey=${apiKey}`
+        `https://www.omdbapi.com/?i=${movie.imdbID}&plot=full&apikey=defbdfaf`
       );
       let convertedData1 = await data1.json();
       setDetails(convertedData1);
 
       let data2 = await fetch(
-        `https://www.omdbapi.com/?i=${movie.imdbID}&plot=short&apikey=${apiKey}`
+        `https://www.omdbapi.com/?i=${movie.imdbID}&plot=short&apikey=defbdfaf`
       );
       let convertedData2 = await data2.json();
       setExcerpt(convertedData2.Plot);

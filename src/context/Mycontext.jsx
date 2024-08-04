@@ -11,7 +11,6 @@ export const MyContext = createContext({
 export const MyContextProvider = ({ children }) => {
   const [category, setCategory] = useState("All");
   const [suggestedItems, setSuggestedItems] = useState([]);
-  const apiKey = defbdfaf;
   const Movies = [
     {
       Title: "Transformers",
@@ -500,7 +499,6 @@ export const MyContextProvider = ({ children }) => {
     setSuggestedItems,
     Movies,
     getRandomSuggestions,
-    apiKey,
   };
 
   return <MyContext.Provider value={value}>{children}</MyContext.Provider>;

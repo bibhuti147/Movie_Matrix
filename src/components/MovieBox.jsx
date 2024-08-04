@@ -4,13 +4,12 @@ import { Link } from "react-router-dom";
 import { MyContext } from "../context/Mycontext";
 
 const MovieBox = ({ movie }) => {
-  const { apiKey } = useContext(MyContext);
   const [rating, setRating] = useState("");
   useEffect(() => {
     const getItem = async () => {
       try {
         let data = await fetch(
-          `https://www.omdbapi.com/?i=${movie.imdbID}&apikey=${apiKey}`
+          `https://www.omdbapi.com/?i=${movie.imdbID}&apikey=defbdfaf`
         );
         let convertedData = await data.json();
         setRating(convertedData.imdbRating);

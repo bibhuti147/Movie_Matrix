@@ -5,14 +5,8 @@ import MovieBox from "../components/MovieBox";
 import { MyContext } from "../context/Mycontext";
 
 const Home = () => {
-  const {
-    category,
-    setCategory,
-    suggestedItems,
-    setSuggestedItems,
-    Movies,
-    apiKey,
-  } = useContext(MyContext);
+  const { category, setCategory, suggestedItems, setSuggestedItems, Movies } =
+    useContext(MyContext);
   const [searchItems, setSearchItems] = useState([]);
   const [movies, setMovies] = useState(Movies);
   const [searchText, setSearchText] = useState("");
@@ -53,7 +47,7 @@ const Home = () => {
     if (searchText !== "") {
       try {
         let data = await fetch(
-          `https://www.omdbapi.com/?s=${searchText}&page=1&apikey=${apiKey}`
+          `https://www.omdbapi.com/?s=${searchText}&page=1&apikey=defbdfaf`
         );
         let convertedData = await data.json();
         setSearchItems(convertedData.Search || []);
