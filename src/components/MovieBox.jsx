@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { FaRegStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { MyContext } from "../context/Mycontext";
 
 const MovieBox = ({ movie }) => {
   const [rating, setRating] = useState("");
@@ -9,7 +8,7 @@ const MovieBox = ({ movie }) => {
     const getItem = async () => {
       try {
         let data = await fetch(
-          `https://www.omdbapi.com/?i=${movie.imdbID}&apikey=defbdfaf`
+          `https://www.omdbapi.com/?i=${movie.imdbID}&apikey=5dceb21e`
         );
         let convertedData = await data.json();
         setRating(convertedData.imdbRating);

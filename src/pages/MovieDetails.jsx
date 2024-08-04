@@ -1,8 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import Header from "../components/Header";
 import { FaRegStar } from "react-icons/fa";
-import { MyContext } from "../context/Mycontext";
 
 const MovieDetails = () => {
   const location = useLocation();
@@ -24,13 +23,13 @@ const MovieDetails = () => {
   const getItem = async () => {
     try {
       let data1 = await fetch(
-        `https://www.omdbapi.com/?i=${movie.imdbID}&plot=full&apikey=defbdfaf`
+        `https://www.omdbapi.com/?i=${movie.imdbID}&plot=full&apikey=5dceb21e`
       );
       let convertedData1 = await data1.json();
       setDetails(convertedData1);
 
       let data2 = await fetch(
-        `https://www.omdbapi.com/?i=${movie.imdbID}&plot=short&apikey=defbdfaf`
+        `https://www.omdbapi.com/?i=${movie.imdbID}&plot=short&apikey=5dceb21e`
       );
       let convertedData2 = await data2.json();
       setExcerpt(convertedData2.Plot);

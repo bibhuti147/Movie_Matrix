@@ -47,7 +47,7 @@ const Home = () => {
     if (searchText !== "") {
       try {
         let data = await fetch(
-          `https://www.omdbapi.com/?s=${searchText}&page=1&apikey=defbdfaf`
+          `https://www.omdbapi.com/?s=${searchText}&page=1&apikey=5dceb21e`
         );
         let convertedData = await data.json();
         setSearchItems(convertedData.Search || []);
