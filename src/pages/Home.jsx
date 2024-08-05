@@ -32,7 +32,6 @@ const Home = () => {
         }
       }
     } else {
-      console.log(suggestedItems);
       if (value === "Movies") {
         setMovies(suggestedItems.filter((movie) => movie.Type === "movie"));
       } else if (value === "TV Shows") {
@@ -81,9 +80,8 @@ const Home = () => {
       setMovies(searchItems);
     } else {
       setMovies(Movies);
-      handleCategory(category);
     }
-  }, [searchItems, suggestedItems, category]);
+  }, [searchItems, suggestedItems]);
 
   return (
     <div className="min-h-screen bg-[#12172A]">
