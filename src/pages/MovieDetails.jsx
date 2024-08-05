@@ -86,7 +86,7 @@ const MovieDetails = () => {
                     ? "TV Show"
                     : details.Type}
                 </p>
-                <p className="text-2xl text-[#E3E9F8] font-semibold whitespace-nowrap">
+                <p className="text-2xl text-[#E3E9F8] font-semibold md:whitespace-nowrap">
                   {details.Title}
                 </p>
               </div>

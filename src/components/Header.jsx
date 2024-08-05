@@ -21,10 +21,18 @@ const Header = () => {
           <button onClick={() => setCategory("Movies")}>Movies</button>
         </Link>
         <Link to="/">
-          <button onClick={() => setCategory("TV Shows")}>TV Shows</button>
+          <button
+            className="whitespace-nowrap"
+            onClick={() => setCategory("TV Shows")}
+          >
+            TV Shows
+          </button>
         </Link>
         <Link to="/">
-          <button onClick={getRandomSuggestions} className="flex gap-1">
+          <button
+            onClick={getRandomSuggestions}
+            className="flex gap-1 whitespace-nowrap"
+          >
             Suggest me <FaArrowRightLong size={12} className="mt-[6px]" />
           </button>
         </Link>
