@@ -69,7 +69,7 @@ const MovieDetails = () => {
         ) : (
           <>
             <Header />
-            <div className="relative px-20">
+            <div className="relative px-10 md:px-20">
               <div className="py-10 rounded-3xl">
                 <img
                   src={details.Poster}
@@ -77,7 +77,7 @@ const MovieDetails = () => {
                   className="w-full h-96 object-cover rounded-3xl"
                 />
               </div>
-              <div className="absolute left-32 bottom-1 bg-opacity-85 w-fit pr-[10%] px-7 py-5 bg-[#1E263D] rounded-3xl">
+              <div className="absolute left-16 md:left-32 bottom-[-20px] md:bottom-1 bg-opacity-85 w-fit pr-[10%] px-7 py-3 md:py-5 bg-[#1E263D] rounded-3xl">
                 <p className="text-xs text-[#8896A8] font-semibold">
                   MovieMatrix /{" "}
                   {details.Type === "movie"
@@ -91,8 +91,8 @@ const MovieDetails = () => {
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-10 px-32 py-10 relative z-20">
-              <div className="rounded-t-3xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 px-14 md:px-32 py-10 relative z-20">
+              <div className="hidden lg:block rounded-t-3xl">
                 <img
                   src={details.Poster}
                   alt="p_image"
@@ -100,10 +100,10 @@ const MovieDetails = () => {
                 />
               </div>
               <div className="gap-2">
-                <p className="font-bold text-justify text-[#E3E9F8]">
+                <p className="text-left md:text-justify font-bold text-[#E3E9F8]">
                   {excerpt}
                 </p>
-                <p className="pr-32 py-5 text-[#8896A8] font-semibold text-sm">
+                <p className="md:pr-32 py-5 text-[#8896A8] font-semibold text-sm text-left">
                   {details.Plot}
                 </p>
                 <div className="bg-black w-[42px] p-1 rounded-md flex gap-1 text-xs text-orange-300">

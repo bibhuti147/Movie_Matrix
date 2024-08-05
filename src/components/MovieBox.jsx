@@ -24,17 +24,19 @@ const MovieBox = ({ movie }) => {
     <div className="bg-[#2B2A3C] rounded-md">
       <Link to={`/movie/${movie.Title}`} state={{ movie }}>
         <div className="relative rounded-md">
-          <div className="bg-black p-1 absolute left-4 top-4 rounded-md flex gap-1 text-orange-300">
-            <FaRegStar size={17} className="mt-[3px]" />
-            <p>{rating}</p>
+          <div className="bg-black absolute px-1 md:px-0 py-[2px] md:py-1 left-4 top-4 rounded-md flex gap-[2px] md:gap-1 text-orange-300">
+            <FaRegStar className="md:mt-[3px] w-3 md:w-8" />
+            <p className="md:-ml-2 md:px-0 md:pr-2 text-xs md:text-base">
+              {rating}
+            </p>
           </div>
           <img
             src={movie.Poster}
             alt="image"
-            className="p-2 rounded-md h-96 w-96"
+            className="p-2 rounded-md h-48 md:h-96 w-96"
           />
         </div>
-        <p className="p-2 pb-[10%] text-[#C2C1CF] text-sm font-semibold line-clamp-1">
+        <p className="p-2 md:pb-[10%] text-[#C2C1CF] text-sm font-semibold">
           {movie.Title}
         </p>
       </Link>

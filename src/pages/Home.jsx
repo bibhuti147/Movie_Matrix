@@ -32,6 +32,7 @@ const Home = () => {
         }
       }
     } else {
+      console.log(suggestedItems);
       if (value === "Movies") {
         setMovies(suggestedItems.filter((movie) => movie.Type === "movie"));
       } else if (value === "TV Shows") {
@@ -80,19 +81,19 @@ const Home = () => {
       setMovies(searchItems);
     } else {
       setMovies(Movies);
+      handleCategory(category);
     }
-    handleCategory(category);
   }, [searchItems, suggestedItems, category]);
 
   return (
     <div className="min-h-screen bg-[#12172A]">
       <div className="relative">
-        <div className="absolute top-[50px] right-1 w-[700px] h-[480px] bg-[#171A3B] filter blur-3xl rounded-[764px]"></div>
-        <div className="absolute top-[80px] left-[-40px] w-[700px] h-[480px] bg-[#0F2B43] filter blur-3xl rounded-[764px] z-0"></div>
+        <div className="absolute top-[50px] right-1 w-[300px] md:w-[700px] h-[480px] bg-[#171A3B] filter blur-3xl rounded-[764px]"></div>
+        <div className="absolute top-[80px] left-[-40px] w-[300px] md:w-[700px] h-[480px] bg-[#0F2B43] filter blur-3xl rounded-[764px] z-0"></div>
       </div>
       <div className="relative z-20">
         <Header />
-        <div className="px-20 py-10">
+        <div className="px-5 md:px-20 py-10">
           <h1 className="text-[#EBF0F6] py-5 text-6xl font-semibold">
             MovieMatrix
           </h1>
@@ -111,7 +112,7 @@ const Home = () => {
               onChange={handleInputChange}
               onKeyDown={handleKeyPress}
               placeholder="Search Movies or TV Shows"
-              className="bg-[#12172A] placeholder:text-gray-600 text-gray-400 text-xs h-14 pl-10 w-1/4 rounded-lg focus:outline-none border border-gray-700"
+              className="bg-[#12172A] placeholder:text-gray-600 text-gray-400 text-xs h-14 pl-10 w-[65%] md:w-1/4 rounded-lg focus:outline-none border border-gray-700"
             />
             <button
               onClick={() => handleSearch(searchText)}
@@ -120,7 +121,7 @@ const Home = () => {
               <IoSearchSharp size={20} className="text-gray-700" />
             </button>
           </div>
-          <div className="bg-[#0C2234] text-sm font-semibold flex justify-between rounded-lg p-1 pt-[5px] pb-[6px] px-2 w-1/4">
+          <div className="bg-[#0C2234] text-sm font-semibold flex justify-between rounded-lg p-1 pt-[5px] pb-[6px] px-2 w-[70%] md:w-1/4">
             <button
               onClick={() => handleCategory("All")}
               className={`flex-1 py-2 rounded-md text-[#8896A8] ${
@@ -150,7 +151,7 @@ const Home = () => {
             <span className="text-3xl font-bold">{category}</span>{" "}
             <span className="text-xs font-semibold">({movies.length})</span>
           </p>
-          <div className="grid grid-cols-4 gap-7 py-5">
+          <div className="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-7 py-5">
             {movies.map((movie, index) => (
               <MovieBox key={index} movie={movie} />
             ))}
