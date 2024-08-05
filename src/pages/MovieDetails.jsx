@@ -77,7 +77,7 @@ const MovieDetails = () => {
                   className="w-full h-96 object-cover rounded-3xl"
                 />
               </div>
-              <div className="absolute left-16 md:left-32 bottom-[-20px] md:bottom-1 bg-opacity-85 w-fit pr-[10%] px-7 py-3 md:py-5 bg-[#1E263D] rounded-3xl">
+              <div className="absolute left-[5%] md:left-32 bottom-[-20px] md:bottom-1 bg-opacity-85 w-fit md:pr-[10%] px-7 py-3 md:py-5 bg-[#1E263D] rounded-3xl">
                 <p className="text-xs text-[#8896A8] font-semibold">
                   MovieMatrix /{" "}
                   {details.Type === "movie"
