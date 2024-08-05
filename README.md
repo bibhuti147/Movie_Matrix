@@ -7,6 +7,7 @@ MovieMatrix is a Vite&React-based web application that allows users to explore a
 - **Search**: Look for specific movies or TV shows by title.
 - **Filter**: Categorize items by "All," "Movies," or "TV Shows."
 - **Dynamic Content**: Display search results or suggested items based on user input.
+- **Mobile Friendly**: The website is Mobile Responsive.
 
 ## Installation
 
