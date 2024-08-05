@@ -8,7 +8,7 @@ const Header = () => {
   const { setCategory, getRandomSuggestions } = useContext(MyContext);
 
   return (
-    <div className="bg-[#121a31] flex justify-between text-sm font-semibold text-[#BFB7FD] px-5 md:px-20 py-5">
+    <div className="bg-[#121a31] flex justify-between text-sm font-semibold text-[#BFB7FD] px-10 md:px-20 py-5">
       <Link to="/">
         <img
           src={logo}
@@ -16,7 +16,7 @@ const Header = () => {
           className="w-14 h-14 -my-[18px] cursor-pointer"
         />
       </Link>
-      <div className="flex gap-10">
+      <div className="flex gap-5 md:gap-10">
         <Link to="/">
           <button onClick={() => setCategory("Movies")}>Movies</button>
         </Link>
