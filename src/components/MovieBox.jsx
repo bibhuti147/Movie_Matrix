@@ -33,10 +33,10 @@ const MovieBox = ({ movie }) => {
           <img
             src={movie.Poster}
             alt="image"
-            className="p-2 rounded-md h-48 md:h-96 w-96"
+            className="p-2 rounded-md h-44 md:h-96 w-96"
           />
         </div>
-        <p className="p-2 md:pb-[10%] text-[#C2C1CF] text-sm font-semibold">
+        <p className="p-2 md:pb-[10%] text-[#C2C1CF] text-xs md:text-sm font-semibold">
           {movie.Title}
         </p>
       </Link>

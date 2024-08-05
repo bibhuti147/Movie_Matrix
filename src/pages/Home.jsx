@@ -149,7 +149,7 @@ const Home = () => {
             <span className="text-3xl font-bold">{category}</span>{" "}
             <span className="text-xs font-semibold">({movies.length})</span>
           </p>
-          <div className="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-7 py-5">
+          <div className="grid grid-cols-3 md:grid-cols-4 gap-2 md:gap-7 py-5">
             {movies.map((movie, index) => (
               <MovieBox key={index} movie={movie} />
             ))}
