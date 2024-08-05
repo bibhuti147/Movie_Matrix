@@ -8,7 +8,7 @@ const Header = () => {
   const { setCategory, getRandomSuggestions } = useContext(MyContext);
 
   return (
-    <div className="bg-[#121a31] flex justify-between text-sm font-semibold text-[#BFB7FD] px-10 md:px-20 py-5">
+    <div className="bg-[#121a31] flex justify-between text-sm font-semibold text-[#BFB7FD] px-5 md:px-20 py-5">
       <Link to="/">
         <img
           src={logo}
