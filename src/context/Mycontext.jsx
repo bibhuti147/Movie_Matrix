@@ -1,4 +1,4 @@
-import { createContext, useLayoutEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const MyContext = createContext({
   category: "",
@@ -490,7 +490,7 @@ export const MyContextProvider = ({ children }) => {
     setSuggestedItems(shuffledMovies.slice(0, 10));
   };
 
-  useLayoutEffect(() => {}, [suggestedItems]);
+  useEffect(() => {}, [suggestedItems]);
 
   const value = {
     category,
