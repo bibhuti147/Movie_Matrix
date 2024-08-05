@@ -11,12 +11,10 @@ const MovieDetails = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Set a timeout to hide the spinner after 1 second (1000 milliseconds)
     const timer = setTimeout(() => {
       setLoading(false);
     }, 700);
 
-    // Clean up the timer when the component unmounts
     return () => clearTimeout(timer);
   }, []);
 
@@ -39,7 +37,7 @@ const MovieDetails = () => {
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to top of the page
+    window.scrollTo(0, 0);
     getItem();
   }, []);
 
