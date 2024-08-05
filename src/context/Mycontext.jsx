@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 export const MyContext = createContext({
   category: "",
@@ -489,8 +489,6 @@ export const MyContextProvider = ({ children }) => {
     const shuffledMovies = [...Movies].sort(() => 0.5 - Math.random());
     setSuggestedItems(shuffledMovies.slice(0, 10));
   };
-
-  useEffect(() => {}, [suggestedItems]);
 
   const value = {
     category,
