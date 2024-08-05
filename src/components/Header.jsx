@@ -33,7 +33,8 @@ const Header = () => {
             onClick={getRandomSuggestions}
             className="flex gap-1 whitespace-nowrap"
           >
-            Suggest me <FaArrowRightLong size={12} className="mt-[5px]" />
+            Suggest me{" "}
+            <FaArrowRightLong size={12} className="mt-[4px] md:mt-[5px]" />
           </button>
         </Link>
       </div>
