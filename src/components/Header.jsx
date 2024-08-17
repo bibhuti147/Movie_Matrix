@@ -17,17 +17,8 @@ const Header = () => {
         />
       </Link>
       <div className="flex gap-5 md:gap-10">
-        <Link to="/">
-          <button onClick={() => setCategory("Movies")}>Movies</button>
-        </Link>
-        <Link to="/">
-          <button
-            className="whitespace-nowrap"
-            onClick={() => setCategory("TV Shows")}
-          >
-            TV Shows
-          </button>
-        </Link>
+        <div></div>
+        <div></div>
         <Link to="/">
           <button
             onClick={getRandomSuggestions}
